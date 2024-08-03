@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 2%;
+            background-color: rgba(214, 218, 218, 0.783);
+            width: 33vw;
+            height: 85vh;
+            margin: auto;
+            margin-top: 3%;
+            border-radius: 5%;
+        }
+
+        #populate {
+            overflow-y: scroll;
+            margin-bottom: 30px;
+            margin-top: 15px;
+            border-radius: 7px;
+        }
+
+        #populate::-webkit-scrollbar {
+            width: 0;
+        }
+
+        .heading {
+            font-size: xx-large;
+            font-weight: bolder;
+            margin-bottom: 5%;
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px rgb(0, 0, 0), 0 0 5px darkblue;
+        }
+
+        #input-bar {
+            padding: 10px 10px 10px 20px;
+            width: 23vw;
+            border-radius: 5vw;
+            font-size: larger;
+            border: none;
+        }
+
+        #btn {
+            margin-left: 8px;
+            height: 40px;
+            width: 40px;
+            border-radius: 20px;
+            font-size: x-large;
+            position: relative;
+            top: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .task {
+            background-color: white;
+            width: 26vw;
+            border-radius: 7px;
+            margin-bottom: 6%;
+            height: 22px;
+            padding: 10px 10px 10px 20px;
+            font-size: larger;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            color: rgba(78, 79, 79, 0.783);
+            border: 1px solid #ccc;
+            margin-top: 5px;
+        }
+        .delIcon {
+            cursor: pointer;
+            color: rgba(138, 143, 143, 0.86);
+        }
+        .conta{
+            width: 13%;
+            display: flex;
+            justify-content: space-between;
+        }
+        #input-bar:focus {
+            outline: none;
+            color: rgba(100, 101, 101, 0.783);
+        }
+        .edit-input:focus{
+            padding: 0px;
+            border: none;
+            outline: none;
+            font-size: large;
+            color: rgba(127, 129, 129, 0.783);
+        }
+        .edit-input{
+            padding: 0px;
+            border: none;
+            outline: none;
+            font-size: large;
+            color: rgba(154, 156, 156, 0.783);
+        }
+        .edit-icon{
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading">To Do List</div>
+        <div>
+            <input type="" id="input-bar" placeholder="Enter the text...">
+            <button id="btn" onclick="handleAddTask()">+</button>
+            <hr style="margin-top: 20px;">
+        </div>
+        <div id="populate">
+            <img id="image" src="pic.webp" alt="">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
